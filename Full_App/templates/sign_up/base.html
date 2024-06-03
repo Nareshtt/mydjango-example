@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'sign_up/base.css' %}" />
+  </head>
+  <body>
+    <nav>
+      <div>
+        <ul>
+          <li><a href="{%url 'sign_up:home'%}">Home</a></li>
+          <li><a href="{%url 'sign_up:register'%}">Register</a></li>
+          <li><a href="{%url 'admin:index'%}">Admin</a></li>
+          {% if user.is_authenticated %}
+          <li><a href="{% url 'sign_up:logout' %}">Logout</a></li>
+          {% else %}
+          <li><a href="{% url 'sign_up:login' %}">Login</a></li>
+          {% endif %}
+        </ul>
+      </div>
+    </nav>
+    {% block body_block %} {% endblock %}
+  </body>
+</html>

@@ -1,0 +1,74 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container styles */
+.registration-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Heading styles */
+.registration-container h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.registration-container h3 {
+    font-size: 1.5em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Form styles */
+.registration-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.registration-container form input[type="text"],
+.registration-container form input[type="email"],
+.registration-container form input[type="password"],
+.registration-container form select {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.registration-container form .submit-button {
+    width: 80%;
+    padding: 10px;
+    margin: 20px 0;
+    background-color: #6a1b9a; /* Purple color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.registration-container form .submit-button:hover {
+    background-color: #4a148c; /* Darker purple */
+}
+
+/* Thank you message */
+.registration-container h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}

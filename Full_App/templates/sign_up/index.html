@@ -1,0 +1,22 @@
+{% extends 'sign_up/base.html' %} {% block body_block %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'sign_up/index.css' %}" />
+
+    <title>Home Page</title>
+  </head>
+  <body>
+    <div class="home-container">
+      <h1>HEY, WELCOME TO THE HOME PAGE</h1>
+      <p>
+        Click <a href="{% url 'sign_up:register' %}">Register</a> to register
+        your profile
+      </p>
+    </div>
+  </body>
+</html>
+{% endblock %}

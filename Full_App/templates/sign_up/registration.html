@@ -1,0 +1,23 @@
+{% extends 'sign_up/base.html' %} {% block body_block %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'sign_up/registration.css' %}" />
+
+    <title>Registration</title>
+  </head>
+  <body>
+
+    <div class="registration-container">
+      {% if registered %}
+      <h1>THANK YOU FOR REGISTERING</h1>
+      {% else %}
+      <h1>Register Here</h1>
+      <h3>Fill Out This Form:</h3>
+      <form method="post" enctype="multipart/form-data">
+        {% csrf_token %} {{ user_form.as_p }} {{ profile_form.as_p }}
+        <input type="submit" value="Submit" class="submit-button" />
+      </form>
+ {% endif %}
+    </div>
+    {% endblock %}
+  </body>
+</html>
